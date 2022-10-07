@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>내셔널지오그래픽 로그인</title>
+    <link href="css/style_login.css" rel="stylesheet">
+	<script src="js/script.js" defer></script>
+	<script src="https://code.jquery.com/jquery-3.0.0.js"></script>
+</head>
+<body>
+
+    <div id="header">
+		<div class="btn_m"> <!--좌측 모바일 버튼메뉴-->
+			<a href="#">
+				<span></span>			
+				<span></span>			
+				<span></span>
+			</a>
+		</div>
+		<h1 class="logo_p"><a href="index.php"><img src="img/01/toplogo.png" alt="로고"></a></h1>
+		<h1 class="logo_m"><a href="index.php"><i style="display:none;">로고</i></a></h1>
+		<div class="nav_p">
+			<ul>
+				<li><a href="#">HOME</a></li>
+				<li><a href="#">BRAND</a></li>
+				<li><a href="#">DISENY PLUS</a></li>
+				<li><a href="#">STORE</a></li>
+				<li><a href="#">MAGAZINES</a></li>
+				<li><a href="#">SOCIAL MEDIA</a></li>
+			</ul>
+			<div class="btn_p"> <!--우측 PC 버튼메뉴-->
+				<a href="#">
+					<span></span>			
+					<span></span>			
+					<span></span>
+				</a>
+			</div>
+		</div>
+	</div>
+	
+	<!--PC 사이드바 메뉴-->
+	<div id="sidebar_p">
+		<div class="side_menu">
+			<a href="#"><img src="img/01/sidebar.png" alt=""></a>
+			<ul>
+				<li><a href="#">HOME</a></li>
+				<li><a href="#">BRAND</a></li>
+				<li><a href="#">DISNEY PLUS</a></li>
+				<li><a href="#">STORE</a></li>
+				<li><a href="#">MAGAZINES</a></li>
+				<li><a href="#">SOCIAL MEDIA</a></li>
+			</ul>
+		</div>
+	</div>
+	
+	<!--MOBILE 사이드바 메뉴-->
+	<div id="sidebar_m">
+		<p class="top_bg"><!--위쪽배경색--></p>
+		<div class="side_menu">
+			<ul>
+				<li><a href="#">HOME</a></li>
+				<li><a href="#">BRAND</a></li>
+				<li><a href="#">DISNEY PLUS</a></li>
+				<li><a href="#">STORE</a></li>
+				<li><a href="#">MAGAZINES</a></li>
+				<li><a href="#">SOCIAL MEDIA</a></li>
+				<li><a href="ng_login.html">LOGIN</a></li>
+			</ul>
+			<ul class="sns_m">
+				<li><a href="#"><img src="img/01/insta.png" alt="인스타그램"></a></li>
+				<li><a href="#"><img src="img/01/youtube.png" alt="유튜브"></a></li>
+				<li><a href="#"><img src="img/01/facebook.png" alt="페이스북"></a></li>
+			</ul>
+			<ul class="sns_m_h"> <!--hover-->
+				<li><a href="#"><img src="img/01/insta_h.png" alt="인스타그램"></a></li>
+				<li><a href="#"><img src="img/01/youtube_h.png" alt="유튜브"></a></li>
+				<li><a href="#"><img src="img/01/facebook_h.png" alt="페이스북"></a></li>
+			</ul>	
+		</div>
+	</div>
+    
+    <div id="main">
+		<!--우측 상단 SNS 3종/로그인-->
+		<div class="SNS"> 
+			<div class="sns_box">
+				<a href="#"><img src="img/01/insta.png" alt="인스타그램"></a>
+				<a href="#"><img src="img/01/youtube.png" alt="유튜브"></a>
+				<a href="#"><img src="img/01/facebook.png" alt="페이스북"></a>
+			</div>
+			<div class="sns_box_h">
+				<a href="#"><img src="img/01/insta_h.png" alt="인스타그램"></a>
+				<a href="#"><img src="img/01/youtube_h.png" alt="유튜브"></a>
+				<a href="#"><img src="img/01/facebook_h.png" alt="페이스북"></a>
+			</div>
+			<div class="login_p">
+				<a href="ng_login.html">LOGIN</a>
+			</div>
+		</div>
+
+		<!--로그인 폼-->
+        <section class="login_container">
+            <h2 style="display:none;">로그인</h2>
+			<div class="login_box">
+				<form class="login" method="post" action="ng_login.php">
+					<fieldset>
+						<legend>LOGIN</legend>
+						<label><input type="text" id="userid" name="id" placeholder="ID"></label>
+						<label><input type="password" id="userpw" name="pw" placeholder="PASSWORD"></label>
+						<button type="submit">로그인</button>
+					</fieldset>
+				</form>
+
+				<ul class="login_bottom">
+					<li><a href="#">아이디 찾기</a></li>
+					<li><a href="#">비밀번호 찾기</a></li>
+					<li><a href="member_form.html">회원가입</a></li>
+				</ul>
+			</div>
+        </section>
+    </div>
+	
+	<div id="footer">
+		<div class="inner">
+			<div class="nav_footer">
+				<ul>
+					<li><a href="#">HOME</a></li>
+					<li><a href="#">BRAND</a></li>
+					<li><a href="#">DISNEY PLUS</a></li>
+					<li><a href="#">STORE</a></li>
+					<li><a href="#">MAGAZINES</a></li>
+					<li><a href="#">SOCIAL MEDIA</a></li>
+				</ul>
+			</div>
+			<div class="contact">
+				<h4>CONTACT US</h4>
+				<ul>
+					<li>
+						<a href="#">
+							<b>의류</b>
+							<span>02.1588.2906</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<b>매거진</b>
+							<span>02.2004.8800</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<b>트래블러 매거진</b>
+							<span>02.763.8600</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<b>방송</b>
+							<span>02.3490.2742</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<b>모바일 액세서리</b>
+							<span>080.643.1234</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+
+			<div class="aside">
+				<div class="left">
+					<p>© National Geographic Partners LLC. All rights reserved. NATIONAL GEOGRAPHIC and Yellow Border Design are trademarks of National Geographic Society, used under license.</p>
+				</div>
+				<div class="right">
+					<a href="#">개인정보 취급방침 <b>[업데이트됨]</b></a>
+					<a href="#">이용약관</a>
+				</div>
+			</div>
+		</div> 
+	</div>    
+
+</body>
+</html>

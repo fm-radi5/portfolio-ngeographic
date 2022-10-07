@@ -1,0 +1,179 @@
+@charset "utf-8";
+/* CSS Document */
+
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap');
+
+*{margin: 0; padding: 0; color: #fff;}  /* 전체선택자. html 모든 태그 여백 제거 */
+li{list-style: none;} /* 리스트 점표시 제거 */
+a{text-decoration: none; color: inherit;}  /* a태그 밑줄 제거; 부모 요소의 글자 색상 상속 */
+address, em, i{font-style: normal;}
+hr{border: none;}
+table{border-collapse: collapse;} /* 테이블 표 사이 여백 없애줌 */
+textarea{resize: none;}
+/* .clear::after{content: ""; display: block; clear: both;} */
+
+
+body{background: #000; font-family: 'Jost','Noto Sans KR', sans-serif;}
+
+/*헤더*/
+
+#header{position: fixed; left: 50%; transform: translateX(-50%); display: flex; justify-content: space-between; width: 1192px; height: 78px; background:#000; letter-spacing: 0.08em; z-index: 100;}
+#header .btn_m{display: none;}
+#header .logo_p{margin-top: 17px;}
+#header .logo_p a{}
+#header .logo_p a img{width: 123px;}
+#header .logo_m{display: none;}
+#header .nav_p{display: flex; justify-content: center; width: 850px;}
+#header .nav_p ul{display: flex;}
+#header .nav_p ul li{margin-top: 25px;}
+#header .nav_p ul li::after{content: "│"; color: #ffdb00;}
+#header .nav_p ul li a{padding: 25px 15px;}
+#header .nav_p .btn_p{width: 18px; height: 12px; padding: 30px 20px;}
+#header .nav_p .btn_p a{}
+#header .nav_p .btn_p a span{display: block; width: 18px; height: 2px; background: #ffdb00;}
+#header .nav_p .btn_p a span:nth-of-type(2){margin-top: 3px;}
+#header .nav_p .btn_p a span:nth-of-type(3){margin-top: 3px;}
+
+#header .nav_p ul li a:hover{color: #ffdb00;}
+
+@media all and (max-width: 1200px){
+	#header{width: 100%;}
+}
+
+@media all and (max-width: 1000px){
+	#header{height: 64px;}
+	#header .btn_m{display: block;}		
+	#header .btn_m{width: 18px; height: 12px; padding: 26px 20px;}	
+	#header .btn_m a{}
+	#header .btn_m a span{display: block; width: 18px; height: 2px; background: #ffdb00;}
+	#header .btn_m span:nth-of-type(2){margin-top: 3px;}
+	#header .btn_m span:nth-of-type(3){margin-top: 3px;}
+	#header .logo_p{display: none;}
+	#header .logo_m{display: block; margin: 17px auto; transform: translateX(-100%);}
+	#header .logo_m a{display: block; width: 21px; height: 30px; border: 3px solid #ffdb00; box-sizing: border-box;}
+	#header .nav_p{display: none;}
+}
+
+/* PC 사이드바 메뉴 */
+#sidebar_p{display: none; width: 100%; height: 100%; position: fixed; right: 0; top: 0; z-index: 100; background: rgba(0,0,0,0.6); opacity: 0; transition: 0.5s;}
+#sidebar_p .side_menu{width: 500px; height: 100%; box-sizing: border-box; padding: 30px; position: absolute; right: -500px; transition: 0.5s; background: #1b1b1b;}
+#sidebar_p .side_menu>a{display: block; width: 30px; height: 30px; line-height: 30px; text-align: center; border-radius: 5px; background: #000;}
+#sidebar_p .side_menu>a img{}
+#sidebar_p .side_menu ul{margin-top: 30px;}
+#sidebar_p .side_menu ul li{margin-bottom: 20px;}
+#sidebar_p .side_menu ul li>a{font-size: 1.1em; letter-spacing: 0.2em;}
+
+#sidebar_p .side_menu ul li:hover{color: #ffdb00;}
+
+/* MOBILE 사이드바 메뉴 */
+#sidebar_m{display: none; width: 100%; height: 100%; position: fixed; left: 0; top: 0; z-index: 100; opacity: 0; transition: 0.5s;}
+#sidebar_m .top_bg{width: 100%; height: 64px; background: rgba(0,0,0,0.6);}
+#sidebar_m .side_menu{width: 100%; height: 100%; box-sizing: border-box; padding: 30px; position: relative; left: -100%; top: 0; background: #1b1b1b; transition: 0.5s;}
+#sidebar_m .side_menu>ul{}
+#sidebar_m .side_menu>ul>li{margin-bottom: 10px;}
+#sidebar_m .side_menu>ul>li>a{letter-spacing: 0.2em;}
+#sidebar_m .side_menu .sns_m{position: absolute; left: 30px; top: 275px;}
+#sidebar_m .side_menu .sns_m li{display: inline-block; margin-right: 15px;}
+#sidebar_m .side_menu .sns_m li a{}
+#sidebar_m .side_menu .sns_m li a img{width: 32px;}
+#sidebar_m .side_menu .sns_m_h{position: absolute; left: 30px; top: 275px;}
+#sidebar_m .side_menu .sns_m_h li{display: inline-block; margin-right: 15px;}
+#sidebar_m .side_menu .sns_m_h li a{}
+#sidebar_m .side_menu .sns_m_h li a img{opacity: 0; width: 32px;}
+
+#sidebar_m .side_menu>ul>li:hover{color: #ffdb00;}
+#sidebar_m .side_menu .sns_m_h li a img:hover{opacity: 1;}
+
+
+#main{}
+
+/* 우측 상단 SNS 3종 */
+
+#main .SNS{position: relative; margin: 0 auto; max-width: 1200px;}
+#main .SNS .sns_box{position: absolute; top: 80px; right: -70px;}
+#main .SNS .sns_box a{display: block; margin-bottom: 10px;}
+#main .SNS .sns_box a img{width: 34px;}
+#main .SNS .sns_box_h{position: absolute; top: 80px; right: -70px;}
+#main .SNS .sns_box_h a{display: block; margin-bottom: 10px;}
+#main .SNS .sns_box_h a img{opacity: 0; width: 34px;}
+#main .SNS .login_p{position: absolute; top: 240px; right: -85px;}
+#main .SNS .login_p a{display: block; font-size: 0.8em; width: 60px; height: 30px; line-height: 30px; text-align: center;}
+
+#main .SNS .sns_box_h a img:hover{opacity: 1;}
+#main .SNS .login_p a:hover{color: #ffdb00;}
+
+@media all and (max-width: 1000px){
+	#main .SNS{display: none;}
+}
+
+/* SNS 하단 로그인폼 */
+
+#main .login_container{position: relative; top: 78px; width: 1192px; height: 600px; margin: 0 auto;}
+#main .login_container .login_box{width: 350px; box-sizing: border-box; margin: 0 auto; padding: 120px 0;}
+#main .login_container .login_box .login{}
+#main .login_container .login_box .login fieldset{padding: 20px; border: 1px solid #ffdb00;}
+#main .login_container .login_box .login fieldset legend{text-align: center; padding: 0 10px; color: #ffdb00;}
+#main .login_container .login_box .login fieldset label{}
+#main .login_container .login_box .login fieldset input{width: 100%; height: 40px; background: transparent; color: #ccc; box-sizing: border-box; border: none; border-bottom: 1px solid #ccc;}
+#main .login_container .login_box .login fieldset input:focus{outline: none;}
+#main .login_container .login_box .login fieldset button{width: 100%; height: 40px; margin: 30px 0 10px; background: #ccc; color: #1b1b1b; box-sizing: border-box; border: none; cursor: pointer; transition: 0.5s;}
+#main .login_container .login_box .login fieldset button:hover{background: #ffdb00;}
+#main .login_container .login_box .login_bottom{display: flex; justify-content: center;}
+#main .login_container .login_box .login_bottom>li{margin: 20px 10px; font-size: 0.8em; color: #ccc;}
+#main .login_container .login_box .login_bottom>li a{}
+
+@media all and (max-width: 1200px){
+	#main .login_container{width: 100%;}
+}
+
+
+
+/*푸터영역*/
+
+#footer{position: relative; width: 100%; background: #151515;}
+#footer .inner{width: 1200px; margin: 0 auto; box-sizing: border-box;}
+
+/*푸터 MENU*/
+#footer .inner .nav_footer{padding: 45px 0;}
+#footer .inner .nav_footer ul{display: flex; justify-content: flex-start;}
+#footer .inner .nav_footer ul li{letter-spacing: 0.1em; color: #898989;}
+#footer .inner .nav_footer ul li::after{content: "│"; font-weight: bold; padding: 0 15px;}
+#footer .inner .nav_footer ul li:last-of-type::after{content: "";}
+#footer .inner .nav_footer ul li a{font-size: 1.1em; letter-spacing: 0.1em; color: #898989; transition: 0.5s;}
+
+/*CONTACT US*/
+#footer .inner .contact{padding-bottom: 45px;}
+#footer .inner .contact h4{font-size: 1.1em; font-weight: normal; color: #898989;}
+#footer .inner .contact ul{display: flex; flex-wrap: wrap; justify-content:flex-start; width: 730px;}
+#footer .inner .contact ul li{padding-top: 20px; color: #898989;}
+#footer .inner .contact ul li a{display: block; padding-right: 75px; color: #898989;}
+#footer .inner .contact ul li a b{display: block; font-weight: normal; font-size: 0.7em; color: #898989; transition: 0.5s;}
+#footer .inner .contact ul li a span{display: block; font-size: 0.7em; font-weight: bold; color: #898989; transition: 0.5s;}
+
+/* 푸터 하단 */
+#footer .inner .aside{display: flex; flex-wrap: wrap; justify-content: flex-start; width: 100%; padding-bottom: 45px;}
+#footer .inner .aside .left{width: 49%; margin-right: 2%;}
+#footer .inner .aside .left p{font-weight: bold; font-size: 0.7em; letter-spacing: 0.2em; color: #898989;}
+#footer .inner .aside .right{width: 49%;}
+#footer .inner .aside .right a{font-size: 0.7em; margin: 0 30px 0 0; color: #898989;}
+#footer .inner .aside .right a b{font-weight: normal; color: #898989;}
+
+#footer .inner .nav_footer ul li a:hover{color: #ffdb00;}
+#footer .inner .contact ul li a:hover b{color: #ffdb00;}
+#footer .inner .contact ul li a:hover span{color: #ffdb00;}
+
+@media all and (max-width: 1200px){
+	#footer .inner{width: 100%;}
+}
+
+@media all and (max-width: 1000px){
+	#footer .inner{padding: 0 20px 0;}
+	#footer .inner .nav_footer ul{display: block; font-size: 1.2em;}
+	#footer .inner .nav_footer ul li::after{display: none;}
+	#footer .inner .contact ul{width: 70%; margin-right: 30%;}
+	#footer .inner .contact ul li{width: 50%;}
+	
+	#footer .inner .aside .left{width: 100%; margin-right: 0; padding-bottom: 45px;}
+	#footer .inner .aside .right{width: 100%;}
+}
